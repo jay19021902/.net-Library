@@ -1,0 +1,125 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageAdmin.master.vb" Inherits="Admin_MasterPageAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .button 
+        {
+            background-color:  White;
+        }
+        .button:hover {
+             background-color: #000099; 
+             color: white;
+             }
+        .style1
+        {
+            width: 100%;
+            height: 939px;
+        }
+        .style5
+        {
+            height: 122px;
+            width: 215px;
+        }
+        .style8
+        {
+            height: 547px;
+            width: 215px;
+        }
+        .style9
+        {
+            height: 82px;
+            }
+        .style10
+        {
+            height: 33px;
+            width: 215px;
+        }
+        .style11
+        {
+            height: 113px;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="style1">
+            <tr>
+                <td align="left" class="style9" colspan="4" bgcolor="#000099"
+                style="vertical-align: top; padding-top: 10px;">
+                    <asp:Image ID="Image1" runat="server" BorderColor="#000099" BorderWidth="12px" 
+                        Height="100px" ImageUrl="~/demoimages/logo.png" />
+                   </td>
+            </tr>
+            <tr>
+                <td class="style10">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style8" style="vertical-align: top">
+                    <asp:Button ID="btnaddbooks" runat="server" Height="75px" 
+                        PostBackUrl="~/Admin/adminaddbooks.aspx" Text="Add Book" Width="220px" 
+                        CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    <br />
+                    <asp:Button ID="btnbookdata" runat="server" Height="75px" 
+                        PostBackUrl="~/Admin/adminbookdata.aspx" Text="Book Data" Width="220px" 
+                        CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    <br />
+                    <asp:Button ID="btnrequests" runat="server" Height="75px" 
+                        PostBackUrl="~/Admin/adminbookrequest.aspx" Text="Book Request" 
+                        Width="220px" CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    <br />
+                    <asp:Button ID="btnissued" runat="server" Height="75px" 
+                        PostBackUrl="~/Admin/adminbookissued.aspx" Text="Issued Books" 
+                        Width="220px" CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    <br />
+                    <asp:Button ID="btnhistory" runat="server" Height="75px" 
+                        PostBackUrl="~/Admin/adminhistorypage.aspx" Text="History" Width="220px" 
+                        CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Button ID="btnlogout" runat="server" Height="75px" Text="Log out" 
+                        Width="220px" PostBackUrl="~/userloginpage.aspx" 
+                        CssClass="button" BorderWidth="1px" Font-Size="Medium"/>
+                    </td>
+                <td colspan="3" rowspan="2" style="vertical-align: top; text-align: left">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style11" align="center" colspan="4">
+                    Copyright © 2000-2023. All rights reserved.</td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
